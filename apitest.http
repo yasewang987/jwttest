@@ -1,0 +1,17 @@
+GET http://localhost:5000/auth/gettoken HTTP/1.1
+
+###
+
+GET http://localhost:5000/WeatherForecast HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJOYW1lIjoibmFtZTIyMiIsIm5iZiI6MTU5NTIzOTQ0MiwiZXhwIjoxNTk1MjQ5NDQyLCJpc3MiOiJqd3RiZWFyZXIuYXV0aCIsImF1ZCI6Imp3dC5hcGkifQ.wWReSjHnOADwTkpYtV_qWXGODQa5FAwBCc3qvMB2u1I
+
+
+###
+
+GET http://localhost:5000/WeatherForecast/get2 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJOYW1lIjoibmFtZTIyMiIsIm5iZiI6MTU5NTMwMDQ3MSwiZXhwIjoxNTk1MzEwNDcxLCJpc3MiOiJqd3RiZWFyZXIuYXV0aCIsImF1ZCI6Imp3dC5hcGkifQ.Lw2H_xQQqCAnhihHeeV74lzkeDzZDHNu_62ghSMG3H8
+
+
+###
+GET http://localhost:5000/WeatherForecast/get3 HTTP/1.1
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJOYW1lIjoibmFtZTIyMiIsIm5iZiI6MTU5NTQxODUxOCwiZXhwIjoxNTk1NDI4NTE4LCJpc3MiOiJqd3RiZWFyZXIuYXV0aCIsImF1ZCI6Imp3dC5hcGkifQ.ISc29XGxZRLUv8huPdGCdt1Lxi9GwTeDeNPcdwDQvNc
