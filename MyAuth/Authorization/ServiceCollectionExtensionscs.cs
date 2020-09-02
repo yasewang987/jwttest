@@ -7,7 +7,8 @@ namespace jwttest.MyAuth
     {
         public static IServiceCollection AddMyAuthorizationHandler(this IServiceCollection services)
         {
-            return services.AddScoped<IAuthorizationHandler, MyAuthorizationHandler>();
+            return services.AddSingleton<IAuthorizationHandler, MyAuthorizationHandler>()
+                .AddSingleton<IAuthorizationHandler, MyAuthorizationHandler2>();
         }
     }
 }

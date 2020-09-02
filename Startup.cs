@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using jwttest.MyAuth;
+using Microsoft.AspNetCore.Authorization;
 
 namespace jwttest
 {
@@ -49,8 +50,12 @@ namespace jwttest
 
             services.AddAuthorization(configure => {
                 configure.AddPolicy(Jwt.JwtPolicy.Base, options => options.RequireClaim("Name", "name222"));
-                configure.AddPolicy(MyAuthorizationDefaults.PolicyName, options => options.AddRequirements(new MyAuthorizationRequirement("func3","func4")));
+                configure.AddPolicy(MyAuthorizationDefaults.PolicyName, options => {
+                    options.AddRequirements(new MyAuthorizationRequirement("func3","func4"));
+                    options.AddAuthenticationSchemes(MyAuthenticationDefaults.SchemeName);
+                });
             }).AddMyAuthorizationHandler();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

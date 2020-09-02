@@ -54,7 +54,7 @@ namespace jwttest.Controllers
 
         [HttpGet]
         [Route("get3")]
-        [Authorize(AuthenticationSchemes = MyAuth.MyAuthenticationDefaults.SchemeName, Policy = MyAuth.MyAuthorizationDefaults.PolicyName)]
+        [Authorize(Policy = MyAuth.MyAuthorizationDefaults.PolicyName)]
         public IEnumerable<WeatherForecast> Get3()
         {
             var rng = new Random();
